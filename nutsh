@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Aktualisiert das "run"-Skript und führt es aus
+
+DIR="$HOME/.vorkurs"
+FILE="$DIR"/run
+
+wget -q nutsh.morr.cc/run -O "$FILE"
+chmod u+x "$FILE"
+exec "$FILE"

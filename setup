@@ -1,0 +1,11 @@
+#!/bin/sh
+
+DIR="$HOME/.vorkurs"
+FILE="$DIR"/nutsh
+
+mkdir -p "$DIR"
+wget -q nutsh.morr.cc/nutsh -O "$FILE"
+chmod u+x "$FILE"
+export PATH="$DIR:$PATH"
+
+echo "Sie können die Nut Shell starten, indem Sie \"nutsh\" eingeben."

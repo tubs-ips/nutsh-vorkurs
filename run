@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Aktualisiert die Nut Shell und den Vorkurs und startet beides.
+
+if [[ "$(cat "$HOME/.bashrc" | grep vorkurs)" = "" ]]; then
+    echo -e '\n# Für den Vorkurs:\nexport PATH="$HOME/.vorkurs:$PATH"' >> ~/.bashrc
+    echo "Installation läuft. Bitte einen Moment Geduld..."
+else
+    echo "Aktualisiere die Nut Shell..."
+fi
+
+cd ~/.vorkurs
+
+export GOPATH="$(pwd)/go"
+mkdir -p "$GOPATH"
+go get -u morr.cc/nutsh.git
+
+if [ ! -d nutsh-vorkurs ]; then
+    git clone -q git@morr.cc:nutsh-vorkurs
+else
+    cd nutsh-vorkurs; git -q pull; cd ..
+fi
+
+exec ./go/bin/nutsh.git run nutsh-vorkurs
