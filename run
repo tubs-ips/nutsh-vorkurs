@@ -16,9 +16,9 @@ mkdir -p "$GOPATH"
 go get -u morr.cc/nutsh.git
 
 if [ ! -d nutsh-vorkurs ]; then
-    git clone -q git@morr.cc:nutsh-vorkurs
+    git clone -q git://morr.cc/nutsh-vorkurs
 else
-    cd nutsh-vorkurs; git -q pull; cd ..
+    cd nutsh-vorkurs; git pull -q; cd ..
 fi
 
 exec ./go/bin/nutsh.git run nutsh-vorkurs

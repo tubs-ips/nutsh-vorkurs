@@ -3,8 +3,10 @@
 # Aktualisiert das "run"-Skript und führt es aus
 
 DIR="$HOME/.vorkurs"
-FILE="$DIR"/run
+DIRDIR="$DIR/run" # So that "run" doesn't end up in our PATH
+FILE="$DIRDIR"/run
 
+mkdir -p "$DIRDIR"
 wget -q nutsh.morr.cc/run -O "$FILE"
 chmod u+x "$FILE"
 exec "$FILE"
