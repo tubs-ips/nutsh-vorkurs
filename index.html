@@ -6,19 +6,29 @@
         <link rel="stylesheet" href="http://www.w3.org/StyleSheets/Core/Chocolate" type="text/css" />
     </head>
     <body>
-        <h1>Vorkurs Informatik zum WS 13/14</h1>
+        <h1>Die Nut Shell – Vorkurs Informatik zum WS 13/14</h1>
+
+        <p>Die <i>Nut Shell</i> ist ein interaktives Tutorial, mit dem Sie den Umgang mit der bash-Shell und Kommadozeilenwerkzeugen erlernen können.</p>
 
         <h2>Systemvoraussetzungen</h2>
 
-        <p>Wenn Sie die Nut Shell während oder nach dem Vorkurs auf Ihrem eigenen Rechner installieren möchten, brauchen Sie folgende Dinge:</p>
+        <p>Sie können die Nut Shell an drei Orten installieren und benutzen:</p>
+
+        <ul>
+            <li>Neu: Über SSH auf dem GITZ-Server (von überall aus)
+            <p>Hierbei behalten Sie Ihren aktuellen Fortschritt, Sie können allerdings keine grafischen Programme starten (gedit, acroread). Verbinden Sie sich per <i>ssh</i> (Linux, Mac OS) oder <a href="http://www.putty.org"><i>Putty</i></a> (Windows) mit dem Server <code>rzloginlx.rz.tu-bs.de</code></p></li>
+            <li>Im den Linux-Räumen des GITZ</li>
+            <li>Auf Ihrem eigenen Rechner</li>
+        </ul>
+
+        <p>Auf den Rechnern des Vorkurses und auf dem SSH-Server ist bereits alles eingerichtet, auf Ihrem eigenen Rechner brauchen Sie folgende Dinge:</p>
 
         <ol>
             <li>Eine Linux-Distribution, für Anfänger empfehlenswert sind <a href="http://ubuntuusers.de/">Ubuntu</a> oder <a href="http://de.opensuse.org/Hauptseite">openSUSE</a>.</li>
-            <li>Den Compiler der Programmiersprache "Go". Üblicherweise heißt das Softwarepaket <code>golang</code>.</li>
+            <li>Den Compiler der Programmiersprache "Go", mindestens in Version 1.1. Üblicherweise heißt das Softwarepaket <code>golang</code>.</li>
             <li>Git, das Paket heißt fast überall <code>git</code>.</li>
+            <li>Zur Bearbeitung der Lektionen brauchen Sie verschiedene Programme, nämlich mindestens Java und pdflatex. Wenn Sie merken, dass Ihnen ein weiteres Programm fehlt, ist es kein Problem, es während der Lektion nachzuinstallieren.</li>
         </ol>
-
-        <p>Auf den Rechnern des Vorkurses ist bereits alles eingerichtet.</p>
 
         <h2>Installation der Nut Shell</h2>
 
@@ -27,8 +37,8 @@
             Kopieren Sie folgende Zeile in die Zwischenablage: 
             <blockquote><code>source <(curl -s nutsh.morr.cc/setup)</code></blockquote>
             </li>
-            <li>Öffnen Sie ein Terminalfenster (zu finden unter Anwendungen → Systemwerkzeuge → Terminal)</li>
-            <li>Kopieren Sie die Zeile hinein (mit Rechtsklick → Einfügen) und drücken Sie <i>Enter</i>. Die Installation startet.</li>
+            <li>Öffnen Sie ein Terminalfenster.</li>
+            <li>Kopieren Sie die Zeile hinein und drücken Sie <i>Enter</i>. Die Installation startet.</li>
         </ol>
 
         <h2>Starten der Nut Shell</h2>
@@ -43,9 +53,7 @@
 
         <ul>
             <li><a href="https://www.tu-braunschweig.de/ips/teaching/ws13-14/vorkurs">Informationen über den Vorkurs</a></li>
-            <!--
-            <li><a href="/survey/">Feedback zur Nut Shell</a></li>
-            -->
+            <li><a href="http://blog.morr.cc/tag/thesis/">Blogeinträge über die Entwicklung der Nut Shell</a></li>
         </ul>
 
     </body>
