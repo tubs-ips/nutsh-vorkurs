@@ -11,6 +11,7 @@ fi
 
 cd ~/.vorkurs
 
+export TERM="xterm"
 export GOPATH="$(pwd)/go"
 mkdir -p "$GOPATH"
 go get -u morr.cc/nutsh.git
