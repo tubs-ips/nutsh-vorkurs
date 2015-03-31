@@ -14,12 +14,13 @@ cd ~/.vorkurs
 export TERM="xterm"
 export GOPATH="$(pwd)/go"
 mkdir -p "$GOPATH"
-go get -u morr.cc/nutsh.git
+rm -f ./go/bin/nutsh
+go get -u github.com/blinry/nutsh
 
 if [ ! -d nutsh-vorkurs ]; then
-    git clone -q git://morr.cc/nutsh-vorkurs
+    git clone -q https://github.com/blinry/nutsh-vorkurs
 else
     cd nutsh-vorkurs; git pull -q; cd ..
 fi
 
-exec ./go/bin/nutsh.git run nutsh-vorkurs
+exec ./go/bin/nutsh run nutsh-vorkurs
