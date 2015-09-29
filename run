@@ -15,10 +15,10 @@ export TERM="xterm"
 export GOPATH="$(pwd)/go"
 mkdir -p "$GOPATH"
 rm -f ./go/bin/nutsh
-go get -u github.com/blinry/nutsh
+go get -u github.com/tubs-ips/nutsh
 
 if [ ! -d nutsh-vorkurs ]; then
-    git clone -q https://github.com/blinry/nutsh-vorkurs
+    git clone -q https://github.com/tubs-ips/nutsh-vorkurs
 else
     cd nutsh-vorkurs; git pull -q; cd ..
 fi
