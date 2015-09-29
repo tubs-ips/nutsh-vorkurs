@@ -7,6 +7,6 @@ DIRDIR="$DIR/run" # So that "run" doesn't end up in our PATH
 FILE="$DIRDIR"/run
 
 mkdir -p "$DIRDIR"
-wget -q nutsh.morr.cc/run -O "$FILE"
+wget -q tubs-ips.github.io/nutsh-vorkurs/run -O "$FILE"
 chmod u+x "$FILE"
 exec "$FILE"

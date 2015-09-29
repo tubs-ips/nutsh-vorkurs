@@ -4,6 +4,6 @@ DIR="$HOME/.vorkurs"
 FILE="$DIR"/nutsh
 
 mkdir -p "$DIR"
-wget -q nutsh.morr.cc/nutsh -O "$FILE"
+wget -q tubs-ips.github.io/nutsh-vorkurs/nutsh -O "$FILE"
 chmod u+x "$FILE"
 "$FILE"
