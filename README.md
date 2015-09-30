@@ -15,6 +15,8 @@ Lektions-Stückelung
 
 In der Datei [info.yaml](info.yaml) steht, zu welchem Datum welche Lektionen freigeschaltet werden. Soll zum Beispiel am 8. Oktober 2015 alles bis inklusive der fünften Lektion freigeschaltet werden, lautet der Eintrag: `2015-10-08: 5`
 
+Mit folgendem Befehl können (zum Testen, oder für besonders schnelle Teilnehmer) sämtliche Lektionen freigeschaltet werden: `touch ~/.vorkurs/nutsh-vorkurs/all`
+
 Syntax der Lektions-Dateien
 ---------------------------
 
