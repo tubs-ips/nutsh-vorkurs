@@ -1,5 +1,7 @@
 lesson_name("Umleitungen und Pipes")
 make_home
+run("rm $ROOT/wohnzimmer/prozesse")
+run("rm $ROOT/schild")
 
 "Wenn Sie die Ausgabe eines Befehls speichern möchten, können Sie hinter den Befehl `> datei` schreiben, um die Ausgabe in eine Datei umzuleiten. Die Datei wird dabei angelegt, wenn Sie noch nicht existiert, andernfalls wird sie überschrieben."
 

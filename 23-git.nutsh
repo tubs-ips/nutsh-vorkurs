@@ -17,11 +17,11 @@ prompt {
     }
 }
 
-"Sie brauchen weiterhinn einen SSH-Schlüssel, mit dem Sie sich gegenüber GitHub authentifizieren können. Erstellen Sie einen mit dem Befehl `ssh-keygen` (die drei Fragen jeweils mit Enter bestätigen)."
+"Sie brauchen weiterhin einen SSH-Schlüssel, mit dem Sie sich gegenüber GitHub authentifizieren können. Erstellen Sie einen mit dem Befehl `ssh-keygen` (die drei Fragen jeweils mit Enter bestätigen)."
 
 prompt {
     if file("$HOME/.ssh/id_rsa.pub") {
-        expect("yes \"\" | ssh-keygen")
+        expect("touch $HOME/.ssh/id_rsa.pub")
         break
     }
 }
@@ -52,7 +52,7 @@ prompt {
 
 prompt {
     if !(run(`git config --get user.name`) == "") && !(run(`git config --get user.email`) == "") && !(run(`git config --get color.ui`) == "") && !(run(`git config --get alias.graph`) == "") {
-        expect("git config --global user.name \"Fu Bar\"; git config --global user.email \"fu@bar.org\";git config --global color.ui true;git config --global alias.graph \"log --graph --pretty=oneline --abbrev-commit --all --decorate\"")
+        expect("git config --get user.name || git config --global user.name \"Fu Bar\"; git config --get user.email || git config --global user.email \"fu@bar.org\"; git config --get color.ui || git config --global color.ui true; git config --get alias.graph || git config --global alias.graph \"log --graph --pretty=oneline --abbrev-commit --all --decorate\"")
         break
     }
 }
@@ -74,7 +74,7 @@ prompt {
 
         prompt {
             if dir(`"$ROOT"/küche/rezepte/.git/`) {
-                expect("cd ..; rm -rf rezepte; yes yes | git clone git@github.com:safdsafd/rezepte; cd rezepte")
+                expect("cd ..; rm -rf rezepte; yes yes | git clone https://github.com/tubs-ips/nutsh-vorkurs.git rezepte; cd rezepte")
                 break
             }
         }
@@ -99,7 +99,7 @@ prompt {
 
             "Als letztes wollen wir jetzt noch ein bisschen Inhalt in dieses neue Repository tun. Im Unterordner `küche` finden Sie einen Ordner `rezepte`, der bereits einige Rezepte enthält."
 
-            run(`mkdir -p "$ROOT"/küche/rezepte/`)
+            run(`rm -rf "$ROOT"/küche/rezepte/; mkdir -p "$ROOT"/küche/rezepte/`)
             run(`echo -e "1 can prepared coconut frosting\n3/4 cups vegetable oil\n4 large eggs\n1 cup semi-sweet chocolate chips\n3/4 cup butter or margarine, softened\n2/3 cups granulated sugar\n3 large eggs\n1 teaspoon vanilla extract\n2 cups all purpose flour\n2/3 cups cocoa\n1/4 teaspoon baking soda\n1 teaspoon salt\n1/4 teaspoon baking powder\n1/3 cups water\n1 to 2 (6 oz each) vanilla frosting\n\nDon't forget garnishes, such as:\n\nfish shaped crackers\nfish shaped candies\nfish shaped dirt\nfish shaped solid waste\nfish shaped ethyl benzene\npull and peel licorice\nfish shaped volatile organic compounds\nsediment shaped sediment\na 20-foot thick impermeable clay layer\n" > "$ROOT"/küche/rezepte/cake`)
             run(`echo -e "Ingredients\n-----------\n\n- 3 eggs\n- 1 c. honey\n- 3 kumquats, whole (can substitute orange zest and a bit of juice if desired)\n- 2 tsp. orange flower or rose water (optional)\n- 3 oz. chopped almonds or macadamia nuts (fruits of the Mallorn tree)\n- 1/4 c. melted butter\n- 2 1/4 c. flour (barley flour of you want to be really accurate)\n- 1/2 tsp. salt\n\nDirections\n----------\n\nPut the eggs, butter, honey, kumquats, rose or orange flower water, and nuts in\na food processor or blender. Blend on high for 2-4 minutes. Add 1 cup of the\nflour. Blend for a minute or two. Put mixture into a bowl and add the remaining\nflour and the salt. Whisk or stir until well blended. Bake a small amount of\ndough (about two tablespoons) at a time on a pizzelle or iron about 15 seconds\nor until lightly brown, for a flat bread like texture. They can also be baked\nat 350 degrees for about 10-15 minutes. Wrap in a leaf and tie with a string.\n" > "$ROOT"/küche/rezepte/lembas_bread`)
 
@@ -134,7 +134,7 @@ prompt {
 
             prompt {
                 if !(run(`git config --get remote.origin.url`) == "") {
-                    expect("git remote add origin git@github.com:safdsafd/rezepte")
+                    expect("git remote add origin git@github.com:thisisjustasillytestyouknow/rezepte")
                     break
                 }
             }
@@ -147,7 +147,7 @@ prompt {
 
             prompt {
                 if run("git rev-parse master") == run("git rev-parse origin/master") {
-                    expect("yes yes | git push -u origin master -f")
+                    expect("git branch origin/master")
                     break
                 }
             }
@@ -215,7 +215,7 @@ prompt {
 
 prompt {
     if run("git rev-parse master") == run("git rev-parse origin/master") {
-        expect("git push")
+        expect("git reset --hard origin/master")
         break
     }
 }
