@@ -228,7 +228,7 @@ prompt {
 
 "Und nun haben Sie viel Zeit, das ganze nach Herzenslust auszuprobieren. Der Umgang mit einer Versionkontrolle ist vielleich das Wichtigste, das Sie in diesem Vorkurs lernen werden - es ist zur Softwareentwicklung unglaublich praktisch, natürlich vor allem in Gruppen, aber auch, wenn Sie allein ein Programm schreiben und die Gewissheit haben wollen, bei Fehlern zu alten Versionen zurückzukommen."
 
-"Vielleicht hilft Ihnen dieser Spickzettel: http://files.morr.cc/git-spickzettel.png"
+"Vielleicht hilft Ihnen dieser Spickzettel: https://tubs-ips.github.io/nutsh-vorkurs/git-spickzettel.png"
 
 "`echo tipp` gibt Ihnen ab jetzt einen bunten Blumenstrauß von wechselnden Tipps aus. Viel Spaß!"
 

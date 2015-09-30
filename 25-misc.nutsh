@@ -40,7 +40,7 @@ prompt {
 
 "Für Ihr kommendes Studium empfehlen wir Ihnen vor allem, sich weiter mit Git zu beschäftigen - das wird später in Teamprojekten unglaublich hilfreich, aber auch in den Programmieren-Übungen hilft es, um Fehler wieder rückgängig zu machen."
 
-"Falls nicht bereits geschehen, installieren Sie sich mal ein Linux auf Ihrem Computer. Empfehlungen stehen auf der Homepage der Nut Shell: http://nutsh.morr.cc/ Jetzt, wo Sie sich auf der Kommandozeile zurechtfinden, ist der schwierigste Schritt bereits getan, und zur Softwareentwicklung und um zu verstehen, was \"hinter den Kulissen\" passiert, ist es aus unserer Sicht einfach das beste Betriebssystem."
+"Falls nicht bereits geschehen, installieren Sie sich mal ein Linux auf Ihrem Computer. Empfehlungen stehen auf der Homepage der Nut Shell: https://tubs-ips.github.io/nutsh-vorkurs/ Jetzt, wo Sie sich auf der Kommandozeile zurechtfinden, ist der schwierigste Schritt bereits getan, und zur Softwareentwicklung und um zu verstehen, was \"hinter den Kulissen\" passiert, ist es aus unserer Sicht einfach das beste Betriebssystem."
 
 "Spielen Sie *NetHack*! (Ist leider nicht auf den GITZ-Rechnern, können Sie sich aber zu Hause installieren:) https://en.wikipedia.org/wiki/Nethack"
 
@@ -50,7 +50,7 @@ prompt {
 
 "Starten Sie das Skript `fertig` im Flur, um diese letzte Lektion zu beenden. Auf Wiedersehen! :-)"
 
-run(`wget nutsh.morr.cc/fertig -O "$ROOT"/fertig`)
+run(`wget tubs-ips.github.io/nutsh-vorkurs/fertig -O "$ROOT"/fertig`)
 run(`chmod u+x "$ROOT"/fertig`)
 
 prompt {

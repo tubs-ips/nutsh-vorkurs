@@ -2,11 +2,11 @@ lesson_name("wget und curl")
 make_home
 run("cd schrank")
 
-"Sie können mit der Kommandozeile im Internet surfen! Um eine Website anzuzeigen, können Sie `curl` benutzen, und als Argument zum Beispiel die sehr einfach aufgebaute Seite `nutsh.morr.cc` angeben. Probieren Sie aber auch mal andere aus!"
+"Sie können mit der Kommandozeile im Internet surfen! Um eine Website anzuzeigen, können Sie `curl` benutzen, und als Argument zum Beispiel die sehr einfach aufgebaute Seite `https://tubs-ips.github.io/nutsh-vorkurs/` angeben. Probieren Sie aber auch mal andere aus!"
 
 prompt {
     if command =~ "^curl" && success {
-        expect("curl nutsh.morr.cc")
+        expect("curl https://tubs-ips.github.io/nutsh-vorkurs/")
         break
     }
 }
