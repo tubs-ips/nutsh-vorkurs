@@ -21,7 +21,7 @@ prompt {
 
 "Wenn `pdflatex` einen Fehler meldet und mit einem Fragezeichen auf Eingaben wartet, können Sie* x* eintippen, um abzubrechen, oder* h*, um sich weitere Optionen anzeigen zu lassen."
 
-"Geben Sie `fertig` ein, wenn Sie weitermachen möchten."
+"Geben Sie `fertig` aus, wenn Sie weitermachen möchten."
 
 prompt {
     if ready {
