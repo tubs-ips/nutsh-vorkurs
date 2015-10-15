@@ -23,4 +23,5 @@ else
     cd nutsh-vorkurs; git pull -q; cd ..
 fi
 
+export LC_ALL=de_DE.utf8
 exec ./go/bin/nutsh run nutsh-vorkurs
