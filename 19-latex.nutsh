@@ -15,7 +15,7 @@ prompt {
     }
 }
 
-"Dass `pdflatex` so rumbrabbelt, ist normal. Es hat eine PDF-Datei erzeugt, die Sie sich beispielsweise mit `evince` oder `acroread` anschauen können."
+"Dass `pdflatex` so rumbrabbelt, ist normal. Es hat eine PDF-Datei erzeugt, die Sie sich beispielsweise mit `evince` anschauen können."
 
 "Versuchen Sie einmal, auf eigene Faust etwas am Text zu ändern, das PDF-Dokument neu zu generieren, und überprüfen Sie, ob die Änderungen übernommen wurden."
 
