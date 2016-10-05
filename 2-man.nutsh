@@ -48,6 +48,7 @@ prompt {
     if help {
         expect("echo help")
         "Wenn Sie keine entsprechende Option finden, kann es sein, dass Ihr `cal`-Programm keine Versions-Option besitzt, und sie dementsprechend auch nicht in der Manpage steht. In diesem Fall verraten wir sie Ihnen einfach: `--version`."
+        break
     }
 }
 
