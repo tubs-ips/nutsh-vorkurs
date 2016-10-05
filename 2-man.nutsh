@@ -37,7 +37,8 @@ prompt {
 
 "Die Manpage nennt noch zwei ganz typische, nützliche Optionen, die in vielen Befehlen eingebaut ist:"
 
-"Die eine gibt die Version des Befehls aus. Das kann praktisch sein, wenn man bei Fehlermeldungen im Internet nach Ratschlägen sucht. Bitte lassen Sie sich die Version Ihres `cal`-Befehls ausgeben."
+"Die eine gibt die Version des Befehls aus. Das kann praktisch sein, wenn man bei Fehlermeldungen im Internet nach Ratschlägen sucht." 
+/*"Bitte lassen Sie sich die Version Ihres `cal`-Befehls ausgeben."
 
 prompt {
     if command =~ `^cal\s+(--version|-V)` {
@@ -50,7 +51,7 @@ prompt {
         "Wenn Sie keine entsprechende Option finden, kann es sein, dass Ihr `cal`-Programm keine Versions-Option besitzt, und sie dementsprechend auch nicht in der Manpage steht. In diesem Fall verraten wir sie Ihnen einfach: `--version`."
         break
     }
-}
+}*/
 
 "Die zweite Option, die viele Befehle haben, ist `--help` - sie gibt eine kurze und knappe Hilfe zu dem Befehl aus."
 
