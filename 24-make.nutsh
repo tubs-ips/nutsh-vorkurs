@@ -57,7 +57,7 @@ prompt {
 "Und nun kommt das Tolle: Ändern Sie das Programm so, dass die Wurzel von 1337 berechnet wird und führen Sie dann einfach `make` aus."
 
 prompt {
-    if command =~ `make$` && success && output =~ "669\\.0" {
+    if command =~ `make$` && success && output =~ "36\\.56" {
         expect("sed -i -e 's/a = 42.0/a = 1337.0/' Heron.java; rm Heron.class; make")
         break
     }
